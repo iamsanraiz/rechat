@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Chat Application</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <div id="appContainer">
+        <div id="loginContainer" class="view">
+            <h1>Welcome to ChatApp</h1>
+            <p>Please sign in to continue.</p>
+            <button id="loginBtn">
+                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_24dp.png" alt="Google logo"/>
+                Sign in with Google
+            </button>
+        </div>
+
+        <main id="chatContainer" class="view" style="display: none;">
+            <header id="chatHeader">
+                <div id="userInfo">
+                    <img id="userAvatar" src="" alt="User Avatar">
+                    <span id="userName"></span>
+                </div>
+                <button id="logoutBtn">Logout</button>
+            </header>
+
+            <section id="messages"></section>
+
+            <footer id="chatFooter">
+                <form id="messageForm">
+                    <input type="text" id="messageInput" placeholder="Type a message..." autocomplete="off" required>
+                    <button type="submit" aria-label="Send Message">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                        </svg>
+                    </button>
+                </form>
+            </footer>
+        </main>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+
+</body>
+</html>
